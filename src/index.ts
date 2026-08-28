@@ -19,6 +19,13 @@ export type Estado = "activo" | "levantamiento" | "pronto";
 export type Nodo = {
   /** Un solo segmento de la rama de permiso: 'planificacion', no 'operaciones.planificacion'. */
   slug: string;
+  /**
+   * Agrupa en pantalla pero no participa de la rama de permiso. Es el caso de
+   * las áreas de la empresa en el portal de Despapeliza: "Finanzas" ordena la
+   * vista, pero el permiso de lo que cuelga sigue siendo `facturacion`, no
+   * `finanzas.facturacion`. Un grupo nunca tiene url.
+   */
+  grupo?: boolean;
   titulo: string;
   /** Bajada corta; en el portal se muestra en el primer nivel y como tooltip más abajo. */
   descripcion?: string;
@@ -48,7 +55,11 @@ export function recorrer(
 ): { nodo: Nodo; rama: string; ancestros: Nodo[] }[] {
   return nodos.flatMap((nodo) => {
     const camino = [...ancestros, nodo];
-    const rama = camino.map((n) => n.slug).join(".");
+    // Los grupos ordenan la vista pero no suman segmento a la rama.
+    const rama = camino
+      .filter((n) => !n.grupo)
+      .map((n) => n.slug)
+      .join(".");
     return [
       { nodo, rama, ancestros },
       ...(nodo.hijos ? recorrer(nodo.hijos, camino) : []),
@@ -81,6 +92,12 @@ export function podar(
 ): Nodo[] {
   const vivos: Nodo[] = [];
   for (const nodo of nodos) {
+    // Un grupo no tiene permiso propio: pasa si le queda algún hijo visible.
+    if (nodo.grupo) {
+      const hijos = podar(nodo.hijos ?? [], permite, prefijo);
+      if (hijos.length) vivos.push({ ...nodo, hijos });
+      continue;
+    }
     const rama = prefijo ? `${prefijo}.${nodo.slug}` : nodo.slug;
     if (!permite(rama)) continue;
     const podado: Nodo = { ...nodo };
@@ -101,7 +118,11 @@ export function arbolDePermisos(nodos: Nodo[]): {
     nombre: n.titulo,
     ...(n.hijos?.length ? { hijos: n.hijos.map(mapear) } : {}),
   });
-  return nodos.map(mapear);
+  // Los grupos no son permisos: se saltan y suben sus hijos al nivel del padre,
+  // para que el selector muestre exactamente las ramas que existen.
+  const aplanar = (ns: Nodo[]): Nodo[] =>
+    ns.flatMap((n) => (n.grupo ? aplanar(n.hijos ?? []) : [n]));
+  return aplanar(nodos).map(mapear);
 }
 
 export { OMAMET } from "./omamet";
