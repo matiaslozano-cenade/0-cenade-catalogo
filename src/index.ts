@@ -79,14 +79,15 @@ export function podar(
   permite: (rama: string) => boolean,
   prefijo = "",
 ): Nodo[] {
-  return nodos
-    .map((nodo) => {
-      const rama = prefijo ? `${prefijo}.${nodo.slug}` : nodo.slug;
-      if (!permite(rama)) return null;
-      const hijos = nodo.hijos ? podar(nodo.hijos, permite, rama) : undefined;
-      return { ...nodo, hijos };
-    })
-    .filter((n): n is Nodo => n !== null);
+  const vivos: Nodo[] = [];
+  for (const nodo of nodos) {
+    const rama = prefijo ? `${prefijo}.${nodo.slug}` : nodo.slug;
+    if (!permite(rama)) continue;
+    const podado: Nodo = { ...nodo };
+    if (nodo.hijos) podado.hijos = podar(nodo.hijos, permite, rama);
+    vivos.push(podado);
+  }
+  return vivos;
 }
 
 /** El árbol que consume el selector de permisos del hub maestro. */
