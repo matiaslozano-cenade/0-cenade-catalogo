@@ -52,11 +52,31 @@ resuelve quien pinta. Así el catálogo no arrastra dependencias de UI.
 
 ## Clientes
 
-| Cliente | Export | Nodos |
-| --- | --- | --- |
-| Omamet (4) | `OMAMET` | 22 (21 navegables) |
+| Cliente | Export | Ramas | Pantallas |
+| --- | --- | --- | --- |
+| Cenade (0) | `CENADE` | 4 | 4 |
+| Indra Repuestos (1) | `INDRA` | 15 | 15 |
+| Hidrogistica (2) | `HIDROGISTICA` | 5 | 5 |
+| Chamonate (3) | `CHAMONATE` | 12 | 9 |
+| Omamet (4) | `OMAMET` | 22 | 21 |
+| Despapeliza (5) | `DESPAPELIZA` | 17 | 15 |
+| C.I.L. (6) | `CIL` | 11 | 11 |
+| Mardones (7) | `MARDONES` | 8 | 6 |
+| Demo (8) | `DEMO` | 5 | 5 |
+| ANAM (9) | `ANAM` | 3 | 3 |
+| **Total** | | **102** | **94** |
 
-Los demás clientes se van sumando acá a medida que se migran.
+La diferencia entre ramas y pantallas son los nodos que agrupan, los que están por
+construirse (`estado: "pronto"`) y los `oculto: true`.
+
+## Marcas de un nodo
+
+| Campo | Qué significa |
+| --- | --- |
+| `grupo` | Ordena la vista pero no entra en la rama de permiso (las áreas de Despapeliza) |
+| `oculto` | Existe como rama pero no se pinta (`pemrc`/`peespi`, que ya se ven dentro de su división) |
+| `sso` | Hay que entrar con `SSOLink`, no con un enlace normal (KPI Gerencias de Indra) |
+| `estado` | `levantamiento` o `pronto`: se muestra marcado y sin enlace |
 
 ## Importante: el repo va público
 

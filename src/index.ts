@@ -35,6 +35,14 @@ export type Nodo = {
   estado?: Estado;
   /** Nombre del icono de lucide-react. El paquete no importa iconos: los resuelve quien pinta. */
   icono?: string;
+  /** La app tiene /auth/sso propio y hay que entrar con SSOLink, no con un enlace normal. */
+  sso?: boolean;
+  /**
+   * Existe como rama de permiso pero no se pinta en el portal: es el caso de
+   * `pemrc` y `peespi` en Mardones, que ya se ven dentro de su división y no
+   * tienen por qué aparecer dos veces.
+   */
+  oculto?: boolean;
   hijos?: Nodo[];
 };
 
@@ -70,7 +78,7 @@ export function recorrer(
 /** Solo las hojas navegables: lo que un buscador debe poder ofrecer. */
 export function hojas(nodos: Nodo[]) {
   return recorrer(nodos)
-    .filter(({ nodo }) => nodo.url)
+    .filter(({ nodo }) => nodo.url && !nodo.oculto)
     .map(({ nodo, rama, ancestros }) => ({
       rama,
       titulo: nodo.titulo,
@@ -125,4 +133,13 @@ export function arbolDePermisos(nodos: Nodo[]): {
   return aplanar(nodos).map(mapear);
 }
 
+export { CENADE } from "./cenade";
+export { INDRA } from "./indra";
+export { HIDROGISTICA } from "./hidrogistica";
+export { CHAMONATE } from "./chamonate";
 export { OMAMET } from "./omamet";
+export { DESPAPELIZA } from "./despapeliza";
+export { CIL } from "./cil";
+export { MARDONES } from "./mardones";
+export { DEMO } from "./demo";
+export { ANAM } from "./anam";

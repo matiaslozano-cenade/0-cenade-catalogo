@@ -7,7 +7,16 @@
   "types": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./omamet": "./src/omamet.ts"
+    "./cenade": "./src/cenade.ts",
+    "./indra": "./src/indra.ts",
+    "./hidrogistica": "./src/hidrogistica.ts",
+    "./chamonate": "./src/chamonate.ts",
+    "./omamet": "./src/omamet.ts",
+    "./despapeliza": "./src/despapeliza.ts",
+    "./cil": "./src/cil.ts",
+    "./mardones": "./src/mardones.ts",
+    "./demo": "./src/demo.ts",
+    "./anam": "./src/anam.ts"
   },
   "files": [
     "src"
