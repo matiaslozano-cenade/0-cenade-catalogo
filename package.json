@@ -1,0 +1,18 @@
+{
+  "name": "@cenade/catalogo",
+  "version": "1.0.0",
+  "description": "Catálogo único de apps por cliente: de acá salen el portal, el selector de permisos y los slugs que comprueban los proxies",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./omamet": "./src/omamet.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}
