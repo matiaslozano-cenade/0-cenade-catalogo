@@ -137,6 +137,15 @@ export const OMAMET: Catalogo = {
       ],
     },
     {
+      slug: "eerr",
+      titulo: "Estado de Resultados",
+      descripcion:
+        "Desviaciones del consolidado mensual contra el presupuesto: por cuenta contable, por gran cuenta y por grupo, del mes o acumulado del año. Se carga el mismo archivo que envía la empresa, sin editarlo.",
+      url: "https://eerr.omamet.portalcenade.cl",
+      tipo: "tablero",
+      icono: "Landmark",
+    },
+    {
       slug: "calidad",
       titulo: "Calidad",
       descripcion:
