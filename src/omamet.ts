@@ -28,7 +28,6 @@ export const OMAMET: Catalogo = {
       titulo: "Indicadores de Gestión",
       descripcion:
         "Dashboards de indicadores por área: tiempos productivos, % rechazo, mantención preventiva y cumplimiento de fechas.",
-      url: IND,
       tipo: "tablero",
       icono: "BarChart2",
       hijos: [
@@ -61,7 +60,6 @@ export const OMAMET: Catalogo = {
       titulo: "Operaciones",
       descripcion:
         "Seguimiento productivo de pedidos: bloque comercial autocompletado desde Notas de Venta, prioridad, motivo de atraso y fechas de producción.",
-      url: OP,
       tipo: "app",
       icono: "AlertTriangle",
       hijos: [
@@ -69,6 +67,9 @@ export const OMAMET: Catalogo = {
           slug: "atrasos",
           titulo: "Productos en proceso",
           url: `${OP}/atrasos`,
+          // La tabla de seguimiento es una pantalla de verdad: sin esto queda
+          // inalcanzable, porque el título con hijos solo despliega.
+          principal: "Seguimiento de pedidos",
           tipo: "app",
           icono: "AlertTriangle",
           hijos: [
@@ -98,7 +99,6 @@ export const OMAMET: Catalogo = {
         {
           slug: "planificacion",
           titulo: "Planificación",
-          url: `${OP}/planificacion`,
           tipo: "app",
           icono: "GanttChartSquare",
           hijos: [
@@ -150,7 +150,6 @@ export const OMAMET: Catalogo = {
       titulo: "Administración",
       descripcion:
         "Ingreso de Notas de Venta con autocompletado desde el maestro de productos: al elegir el código Omamet se llenan la descripción, la aleación, el material base y el peso teórico. Incluye todo el historial de ventas.",
-      url: ADM,
       tipo: "app",
       icono: "FileSpreadsheet",
       hijos: [
@@ -171,7 +170,6 @@ export const OMAMET: Catalogo = {
         {
           slug: "ingenieria",
           titulo: "Ingeniería",
-          url: `${ADM}/ingenieria`,
           tipo: "app",
           icono: "Ruler",
           hijos: [

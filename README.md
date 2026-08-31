@@ -27,6 +27,23 @@ Es exactamente lo que compara `puedeVer` de `@cenade/portal-auth` y lo que compr
 `proxy.ts` del portal de destino. Por eso cada `slug` del catálogo es **un solo segmento**,
 nunca la rama completa.
 
+## Un nodo con hijos no navega: hay que ofrecer su pantalla aparte
+
+Cuando un nodo tiene hijos, su título pasa a desplegar y deja de navegar. Si además tiene
+una pantalla propia de verdad, hay que ofrecerla como primera fila del desplegable o se
+vuelve inalcanzable desde el portal — le pasó a la tabla de Productos en proceso de Omamet.
+Para eso está `principal`: el nombre con el que se ofrece esa pantalla.
+
+Los nodos que solo listan lo que ya se ve —los hubs de área— **no llevan `url`**. Así el
+portal no reintroduce la parada intermedia que se sacó a propósito.
+
+| Nodo | Qué es | Cómo queda |
+| --- | --- | --- |
+| Productos en proceso | Tabla de seguimiento + 2 vistas | `url` + `principal: "Seguimiento de pedidos"` |
+| Planificación (Omamet) | Solo lista sus 4 programas | sin `url` |
+| Indicadores Financieros | Resumen + 4 vistas | `url` + `principal: "Resumen"` |
+| Tecnología (Despapeliza) | Solo lista sus paneles | sin `url` |
+
 ## Tres niveles, y no más
 
 `NIVELES_MAX = 3`: área → módulo → vista. Lo que aparezca más abajo va como pestaña dentro
@@ -75,6 +92,7 @@ construirse (`estado: "pronto"`) y los `oculto: true`.
 | --- | --- |
 | `grupo` | Ordena la vista pero no entra en la rama de permiso (las áreas de Despapeliza) |
 | `oculto` | Existe como rama pero no se pinta (`pemrc`/`peespi`, que ya se ven dentro de su división) |
+| `principal` | Cómo se ofrece la pantalla propia de un nodo que además tiene hijos |
 | `sso` | Hay que entrar con `SSOLink`, no con un enlace normal (KPI Gerencias de Indra) |
 | `estado` | `levantamiento` o `pronto`: se muestra marcado y sin enlace |
 

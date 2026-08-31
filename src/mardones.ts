@@ -10,7 +10,6 @@ export const MARDONES: Catalogo = {
       titulo: "Renta Comercial",
       descripcion:
         "Herramientas internas de la división de Renta Comercial de Mardones.",
-      url: "https://rentacomercial.mardones.portalcenade.cl",
       tipo: "app",
       icono: "Store",
       hijos: [
@@ -30,7 +29,6 @@ export const MARDONES: Catalogo = {
       titulo: "Espacio Inmobiliario",
       descripcion:
         "Herramientas internas de la división de Espacio Inmobiliario de Mardones.",
-      url: "https://espacioinmobiliario.mardones.portalcenade.cl",
       tipo: "app",
       icono: "Building2",
       hijos: [

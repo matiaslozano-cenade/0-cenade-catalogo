@@ -35,6 +35,17 @@ export type Nodo = {
   estado?: Estado;
   /** Nombre del icono de lucide-react. El paquete no importa iconos: los resuelve quien pinta. */
   icono?: string;
+  /**
+   * Cómo se llama la pantalla propia del nodo cuando además tiene hijos.
+   *
+   * Un nodo con hijos solo despliega: su título deja de navegar. Si su `url`
+   * es una pantalla de verdad —la tabla de Productos en proceso, el resumen de
+   * Indicadores Financieros— hay que ofrecerla igual, o se vuelve inalcanzable
+   * desde el portal. Se pinta como primera fila del desplegable con este
+   * nombre. Los hubs que solo listan lo que ya se ve no llevan `url` y por eso
+   * no aparecen acá.
+   */
+  principal?: string;
   /** La app tiene /auth/sso propio y hay que entrar con SSOLink, no con un enlace normal. */
   sso?: boolean;
   /**

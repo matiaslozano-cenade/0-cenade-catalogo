@@ -31,7 +31,6 @@ export const CIL: Catalogo = {
       titulo: "Indicadores de Gestión",
       descripcion:
         "Gráficos evolutivos de las 4 plantas (Producción, Calidad, Seguridad, RRHH, Bonos, Costos). Carga mensual de los Excel a la base.",
-      url: IND,
       tipo: "tablero",
       icono: "BarChart3",
       hijos: [
@@ -43,6 +42,12 @@ export const CIL: Catalogo = {
         { slug: "rrhh", titulo: "RRHH", url: `${IND}/indicadores/rrhh`, tipo: "tablero", icono: "Users" },
         { slug: "bonos", titulo: "Bonos", url: `${IND}/indicadores/bonos`, tipo: "tablero", icono: "Coins" },
         { slug: "costos", titulo: "Costos", url: `${IND}/indicadores/costos`, tipo: "tablero", icono: "DollarSign" },
+        // Gestión: estaban en el hub y no en el catálogo, así que no se veían
+        // desde el portal.
+        { slug: "reporte", titulo: "Descargar PDF de gráficos", url: `${IND}/reporte`, tipo: "carga", icono: "FileText" },
+        { slug: "acuerdos", titulo: "Acuerdos previos", url: `${IND}/acuerdos`, tipo: "app", icono: "ClipboardList" },
+        { slug: "proyectos", titulo: "Proyectos", url: `${IND}/proyectos`, tipo: "app", icono: "FolderKanban" },
+        { slug: "cargar", titulo: "Cargar datos del mes", url: `${IND}/cargar`, tipo: "carga", icono: "Boxes" },
       ],
     },
   ],

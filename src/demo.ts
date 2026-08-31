@@ -13,6 +13,7 @@ export const DEMO: Catalogo = {
       descripcion:
         "Dashboards ejecutivos de Finanzas (EERR, balance, flujo de caja, KPIs) y de Productividad y Operaciones. Gráficos con etiquetas y detalle por período.",
       url: IND,
+      principal: "Resumen ejecutivo",
       tipo: "tablero",
       icono: "BarChart3",
       hijos: [

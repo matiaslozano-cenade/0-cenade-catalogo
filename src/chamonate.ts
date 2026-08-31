@@ -12,7 +12,6 @@ export const CHAMONATE: Catalogo = {
       titulo: "KPI",
       descripcion:
         "Dashboards de rentabilidad: General consolidado, Campo, Packing y Maquinaria.",
-      url: "https://kpi.chamonate.portalcenade.cl",
       tipo: "tablero",
       icono: "Sprout",
       hijos: [
@@ -27,7 +26,6 @@ export const CHAMONATE: Catalogo = {
       titulo: "Presupuesto",
       descripcion:
         "Presupuesto por línea de negocio contra el resultado real. Hoy Maquinaria; Campo, Packing y consolidado en camino.",
-      url: PPTO,
       tipo: "tablero",
       icono: "Calculator",
       hijos: [

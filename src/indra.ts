@@ -24,7 +24,6 @@ export const INDRA: Catalogo = {
       titulo: "Desarrollo de Indicadores",
       descripcion:
         "Indicadores evolutivos por área: Finanzas, Comercial, Abastecimiento, Logística y TI. Cada área con su propio panel de datos.",
-      url: "https://indicadores.indra.portalcenade.cl",
       tipo: "tablero",
       icono: "TrendingUp",
       hijos: [
@@ -35,7 +34,6 @@ export const INDRA: Catalogo = {
         {
           slug: "ti",
           titulo: "TI",
-          url: TI,
           tipo: "tablero",
           icono: "Monitor",
           hijos: [

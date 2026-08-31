@@ -13,6 +13,7 @@ export const ANAM: Catalogo = {
       descripcion:
         "Etapas, responsables y plazos con carta Gantt, documentos adjuntos y boletas de garantía. Incluye radar de licitaciones futuras y alertas por correo.",
       url: LIC,
+      principal: "Seguimiento",
       tipo: "app",
       icono: "FileText",
       hijos: [

@@ -45,6 +45,7 @@ export const DESPAPELIZA: Catalogo = {
           descripcion:
             "Ventas, egresos, cuentas por cobrar y pagar y flujo de caja, sincronizados a diario desde Chipax.",
           url: IND,
+          principal: "Resumen",
           tipo: "tablero",
           icono: "BarChart3",
           hijos: [
@@ -122,7 +123,6 @@ export const DESPAPELIZA: Catalogo = {
           titulo: "Desarrollos",
           descripcion:
             "Actividad del producto Legale leída de GitHub: tickets, tiempos de resolución, entregas y equipo.",
-          url: TEC,
           tipo: "tablero",
           icono: "Code2",
           hijos: [

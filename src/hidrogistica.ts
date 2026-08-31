@@ -13,6 +13,7 @@ export const HIDROGISTICA: Catalogo = {
       descripcion:
         "Seguimiento del PE 2026-2028. 3 áreas (Servicio Mercado del Agua, Cadena de Suministro, Operación Logística), 73 acciones. Cada área tiene su propio panel con responsables, avances y bitácora.",
       url: PE,
+      principal: "Resumen",
       tipo: "tablero",
       icono: "Target",
       hijos: [
