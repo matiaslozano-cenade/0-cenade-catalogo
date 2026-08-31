@@ -20,6 +20,13 @@ export const CENADE: Catalogo = {
       icono: "ClipboardList",
     },
     {
+      slug: "prospeccion",
+      titulo: "Indicadores de Prospección",
+      url: "https://prospeccion.cenade.portalcenade.cl",
+      tipo: "app",
+      icono: "Target",
+    },
+    {
       slug: "web",
       titulo: "Sitio web público",
       url: "https://cenade.cl",
