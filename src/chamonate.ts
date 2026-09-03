@@ -11,12 +11,13 @@ export const CHAMONATE: Catalogo = {
       slug: "kpi",
       titulo: "KPI",
       descripcion:
-        "Dashboards de rentabilidad: General consolidado, Campo, Packing y Maquinaria.",
+        "Dashboards de rentabilidad: General consolidado, Campo, Administración, Packing y Maquinaria.",
       tipo: "tablero",
       icono: "Sprout",
       hijos: [
         { slug: "general", titulo: "General", url: "https://kpi-general.chamonate.portalcenade.cl", tipo: "tablero", icono: "BarChart3" },
         { slug: "campo", titulo: "Campo", url: "https://kpi-campo.chamonate.portalcenade.cl", tipo: "tablero", icono: "Sprout" },
+        { slug: "administracion", titulo: "Administración", url: "https://kpi-administracion.chamonate.portalcenade.cl", tipo: "tablero", icono: "Building2" },
         { slug: "maquinaria", titulo: "Maquinaria", url: "https://kpi-maquinaria.chamonate.portalcenade.cl", tipo: "tablero", icono: "Wrench" },
         { slug: "packing", titulo: "Packing", url: "https://kpi-packing.chamonate.portalcenade.cl", tipo: "tablero", icono: "Package" },
       ],
