@@ -13,6 +13,15 @@ export const MARDONES: Catalogo = {
       tipo: "app",
       icono: "Store",
       hijos: [
+        {
+          slug: "arriendos",
+          titulo: "Arriendos",
+          descripcion:
+            "Ocupación, contratos, facturación, recaudación y morosidad de las 343 unidades, leídos de la plataforma bheed.",
+          url: "https://arriendos.mardones.portalcenade.cl",
+          tipo: "app",
+          icono: "Building2",
+        },
         // El PE de cada división tiene slug propio de primer nivel (pemrc /
         // peespi), así que va como nodo suelto además de colgar acá.
         {
