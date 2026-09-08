@@ -73,6 +73,15 @@ export const INDRA: Catalogo = {
       icono: "PackageSearch",
     },
     {
+      slug: "digitalizacion-logistica",
+      titulo: "Digitalización Logística",
+      descripcion:
+        "Las listas de empaque de los proveedores entran como PDF, quedan guardadas y se convierten en la cola de trabajo de bodega. Cada persona toma una línea, la baja del contenedor y la marca lista.",
+      url: "https://digitalizacion.indra.portalcenade.cl",
+      tipo: "app",
+      icono: "Boxes",
+    },
+    {
       slug: "organigrama",
       titulo: "Organigrama",
       descripcion:
