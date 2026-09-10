@@ -1,6 +1,6 @@
 import type { Catalogo } from "./index";
 
-const IND = "https://indicadores.despapeliza.portalcenade.cl";
+const IND = "https://financieros.despapeliza.portalcenade.cl";
 const TEC = "https://tecnologia.despapeliza.portalcenade.cl";
 
 /**
