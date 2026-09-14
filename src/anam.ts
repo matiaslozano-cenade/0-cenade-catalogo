@@ -28,9 +28,9 @@ export const ANAM: Catalogo = {
         },
         {
           slug: "ejecutivo",
-          titulo: "Vista Ejecutiva",
+          titulo: "Dashboard Licitaciones",
           descripcion:
-            "Una sola pantalla para la gerencia general: cómo venimos, qué se juega ahora y qué exige decisión esta semana.",
+            "Una sola pantalla para la gerencia general: cómo venimos, qué hay en el pipeline y qué exige decisión esta semana. Lista para imprimir.",
           url: `${LIC}/ejecutivo`,
           tipo: "tablero",
           icono: "Presentation",
