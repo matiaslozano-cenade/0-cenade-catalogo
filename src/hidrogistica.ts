@@ -32,5 +32,14 @@ export const HIDROGISTICA: Catalogo = {
       tipo: "app",
       icono: "Gavel",
     },
+    {
+      slug: "flujos",
+      titulo: "Flujos de procesos",
+      descripcion:
+        "Diagramas por área con sistemas, puntos críticos y propuestas, editables en línea con historial de versiones. Parte con el flujo de consumos y stock de químicos.",
+      url: "https://flujos.hidrogistica.portalcenade.cl",
+      tipo: "app",
+      icono: "GitBranch",
+    },
   ],
 };
