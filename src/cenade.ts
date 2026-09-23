@@ -13,6 +13,15 @@ export const CENADE: Catalogo = {
       icono: "CalendarDays",
     },
     {
+      slug: "redes",
+      titulo: "Seguimiento del Plan de Redes",
+      descripcion:
+        "La rutina semanal de Instagram, la página de LinkedIn y el perfil de Mauricio, con avisos por correo de lo que quedó sin marcar.",
+      url: "https://redes.portalcenade.cl",
+      tipo: "app",
+      icono: "Megaphone",
+    },
+    {
       slug: "leads",
       titulo: "Leads y Diagnósticos",
       url: "https://leads.cenade.portalcenade.cl",
