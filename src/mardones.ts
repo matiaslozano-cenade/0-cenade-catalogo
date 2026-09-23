@@ -14,11 +14,13 @@ export const MARDONES: Catalogo = {
       icono: "Store",
       hijos: [
         {
+          // El slug queda en "arriendos": es la llave de permisos de
+          // usuarios.apps, no el nombre que se muestra.
           slug: "arriendos",
-          titulo: "Arriendos",
+          titulo: "Indicadores",
           descripcion:
             "Ocupación, contratos, facturación, recaudación y morosidad de las 343 unidades, leídos de la plataforma bheed.",
-          url: "https://arriendos.mardones.portalcenade.cl",
+          url: "https://indicadores.mardones.portalcenade.cl",
           tipo: "app",
           icono: "Building2",
         },
