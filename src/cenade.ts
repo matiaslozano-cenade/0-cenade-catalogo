@@ -30,7 +30,9 @@ export const CENADE: Catalogo = {
     },
     {
       slug: "prospeccion",
-      titulo: "Indicadores de Prospección",
+      titulo: "CRM Cenade",
+      descripcion:
+        "En qué porcentaje va la campaña de correos y el seguimiento de cada posible cliente: etapa, próxima acción y las propuestas adjuntas.",
       url: "https://prospeccion.cenade.portalcenade.cl",
       tipo: "app",
       icono: "Target",
