@@ -13,6 +13,15 @@ export const CENADE: Catalogo = {
       icono: "CalendarDays",
     },
     {
+      slug: "tareas",
+      titulo: "Tareas del equipo",
+      descripcion:
+        "Lo que nos pedimos entre nosotros: tareas internas con responsable, fecha comprometida y etiqueta, sin pasar por un cliente.",
+      url: "https://tareas.cenade.portalcenade.cl",
+      tipo: "app",
+      icono: "ListChecks",
+    },
+    {
       slug: "leads",
       titulo: "Leads y Diagnósticos",
       url: "https://leads.cenade.portalcenade.cl",
