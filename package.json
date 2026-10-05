@@ -1,6 +1,6 @@
 {
   "name": "@cenade/catalogo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Catálogo único de apps por cliente: de acá salen el portal, el selector de permisos y los slugs que comprueban los proxies",
   "type": "module",
   "main": "./src/index.ts",
