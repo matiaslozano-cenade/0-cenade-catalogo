@@ -38,6 +38,15 @@ export const CENADE: Catalogo = {
       icono: "Target",
     },
     {
+      slug: "cenadleads",
+      titulo: "Cenadleads",
+      descripcion:
+        "Anuncios de Facebook e Instagram sin el Administrador de anuncios: conectar la cuenta de Meta, crear campañas con ayuda de IA y recibir los contactos.",
+      url: "https://cenadleads.cenade.portalcenade.cl",
+      tipo: "app",
+      icono: "Megaphone",
+    },
+    {
       slug: "web",
       titulo: "Sitio web público",
       url: "https://cenade.cl",
