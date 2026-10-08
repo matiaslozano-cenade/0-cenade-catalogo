@@ -149,6 +149,15 @@ export const DESPAPELIZA: Catalogo = {
           icono: "CalendarClock",
         },
         {
+          slug: "hubspot",
+          titulo: "Indicadores HubSpot",
+          descripcion:
+            "Los indicadores comerciales, de marketing y semanales leídos desde HubSpot, en paralelo a los de Zoho mientras dura la migración.",
+          url: "https://hubspot.despapeliza.portalcenade.cl",
+          tipo: "tablero",
+          icono: "TrendingUp",
+        },
+        {
           slug: "planificacion",
           titulo: "Planificación del Equipo",
           descripcion:

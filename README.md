@@ -76,7 +76,7 @@ resuelve quien pinta. Así el catálogo no arrastra dependencias de UI.
 | Hidrogistica (2) | `HIDROGISTICA` | 5 | 5 |
 | Chamonate (3) | `CHAMONATE` | 12 | 9 |
 | Omamet (4) | `OMAMET` | 23 | 22 |
-| Despapeliza (5) | `DESPAPELIZA` | 17 | 15 |
+| Despapeliza (5) | `DESPAPELIZA` | 18 | 16 |
 | C.I.L. (6) | `CIL` | 11 | 11 |
 | Mardones (7) | `MARDONES` | 8 | 6 |
 | Demo (8) | `DEMO` | 5 | 5 |
