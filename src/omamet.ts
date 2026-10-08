@@ -97,6 +97,13 @@ export const OMAMET: Catalogo = {
           icono: "CalendarClock",
         },
         {
+          slug: "adquisiciones",
+          titulo: "Solicitud de Adquisiciones",
+          url: `${OP}/adquisiciones`,
+          tipo: "app",
+          icono: "ShoppingCart",
+        },
+        {
           slug: "planificacion",
           titulo: "Planificación",
           tipo: "app",

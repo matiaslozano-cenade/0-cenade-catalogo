@@ -75,7 +75,7 @@ resuelve quien pinta. Así el catálogo no arrastra dependencias de UI.
 | Indra Repuestos (1) | `INDRA` | 15 | 15 |
 | Hidrogistica (2) | `HIDROGISTICA` | 5 | 5 |
 | Chamonate (3) | `CHAMONATE` | 12 | 9 |
-| Omamet (4) | `OMAMET` | 22 | 21 |
+| Omamet (4) | `OMAMET` | 23 | 22 |
 | Despapeliza (5) | `DESPAPELIZA` | 17 | 15 |
 | C.I.L. (6) | `CIL` | 11 | 11 |
 | Mardones (7) | `MARDONES` | 8 | 6 |
