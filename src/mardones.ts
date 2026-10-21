@@ -52,6 +52,26 @@ export const MARDONES: Catalogo = {
         },
       ],
     },
+    // Herramientas de trabajo diario: van como rama propia, no dentro de la
+    // división (pedido de Matías 2026-10-21).
+    {
+      slug: "herramientas",
+      titulo: "Herramientas",
+      descripcion: "Herramientas de trabajo diario del grupo.",
+      tipo: "app",
+      icono: "Wrench",
+      hijos: [
+        {
+          slug: "banco",
+          titulo: "Libro Banco",
+          descripcion:
+            "Cartolas bancarias de las sociedades: carga semanal, clasificación asistida de movimientos y cruce con el control de gastos.",
+          url: "https://banco.mardones.portalcenade.cl",
+          tipo: "app",
+          icono: "Landmark",
+        },
+      ],
+    },
     {
       slug: "planrrhh",
       titulo: "Plan de Acción RRHH",
