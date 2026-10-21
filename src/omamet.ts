@@ -184,6 +184,13 @@ export const OMAMET: Catalogo = {
           icono: "Boxes",
         },
         {
+          slug: "cotizaciones",
+          titulo: "Cotizaciones",
+          url: `${ADM}/cotizaciones`,
+          tipo: "app",
+          icono: "FileText",
+        },
+        {
           slug: "costos",
           titulo: "Hoja de costos",
           url: `${ADM}/costos`,
