@@ -76,12 +76,12 @@ resuelve quien pinta. Así el catálogo no arrastra dependencias de UI.
 | Hidrogistica (2) | `HIDROGISTICA` | 5 | 5 |
 | Chamonate (3) | `CHAMONATE` | 12 | 9 |
 | Omamet (4) | `OMAMET` | 23 | 22 |
-| Despapeliza (5) | `DESPAPELIZA` | 18 | 16 |
+| Despapeliza (5) | `DESPAPELIZA` | 19 | 17 |
 | C.I.L. (6) | `CIL` | 11 | 11 |
 | Mardones (7) | `MARDONES` | 8 | 6 |
 | Demo (8) | `DEMO` | 5 | 5 |
 | ANAM (9) | `ANAM` | 3 | 3 |
-| **Total** | | **103** | **95** |
+| **Total** | | **104** | **96** |
 
 La diferencia entre ramas y pantallas son los nodos que agrupan, los que están por
 construirse (`estado: "pronto"`) y los `oculto: true`.

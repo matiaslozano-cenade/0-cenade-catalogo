@@ -109,6 +109,15 @@ export const DESPAPELIZA: Catalogo = {
           tipo: "tablero",
           icono: "MousePointerClick",
         },
+        {
+          slug: "leads",
+          titulo: "Leads de Marketing",
+          descripcion:
+            "Los leads que van llegando por los formularios web (landing, contacto Despapeliza y Legale), guardados sin borrar.",
+          url: "https://leads.despapeliza.portalcenade.cl",
+          tipo: "tablero",
+          icono: "Users",
+        },
       ],
     },
     {
