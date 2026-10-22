@@ -70,6 +70,15 @@ export const MARDONES: Catalogo = {
           tipo: "app",
           icono: "Landmark",
         },
+        {
+          slug: "restituciones",
+          titulo: "Restituciones",
+          descripcion:
+            "Seguimiento de los locales devueltos de Espacio Inmobiliario: 11 etapas con plazo y responsable, fotos por etapa, garantía y semáforo de atrasos.",
+          url: "https://restituciones.mardones.portalcenade.cl",
+          tipo: "app",
+          icono: "ClipboardList",
+        },
       ],
     },
     {
