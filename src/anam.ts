@@ -1,8 +1,9 @@
 import type { Catalogo } from "./index";
 
 const LIC = "https://licitaciones.anam.portalcenade.cl";
+const PE = "https://pe.anam.portalcenade.cl";
 
-/** ANAM — cliente 9. Todo cuelga de la app de licitaciones. */
+/** ANAM — cliente 9. */
 export const ANAM: Catalogo = {
   cliente: "anam",
   nombre: "ANAM",
@@ -34,6 +35,27 @@ export const ANAM: Catalogo = {
           url: `${LIC}/ejecutivo`,
           tipo: "tablero",
           icono: "Presentation",
+        },
+      ],
+    },
+    {
+      slug: "pe2025-2027",
+      titulo: "Plan Estratégico 2025-2027",
+      descripcion:
+        "Estrategia de Crecimiento y Competitividad Sostenible: las 41 acciones del cuadro resumen con su objetivo, eje y KPI por año, más el responsable y el porcentaje de avance de cada una.",
+      url: PE,
+      principal: "Planificación",
+      tipo: "app",
+      icono: "Target",
+      hijos: [
+        {
+          slug: "resumen",
+          titulo: "Avance del Plan Estratégico",
+          descripcion:
+            "Cuánto avanzó cada objetivo, qué acciones están en riesgo y cuáles siguen sin responsable asignado.",
+          url: `${PE}/resumen`,
+          tipo: "tablero",
+          icono: "BarChart3",
         },
       ],
     },
