@@ -122,15 +122,6 @@ export const DESPAPELIZA: Catalogo = {
       icono: "Layers",
       hijos: [
         {
-          slug: "hubspot",
-          titulo: "Indicadores HubSpot",
-          descripcion:
-            "Los indicadores comerciales, de marketing, de prospección y semanales, leídos desde HubSpot.",
-          url: "https://hubspot.despapeliza.portalcenade.cl",
-          tipo: "tablero",
-          icono: "TrendingUp",
-        },
-        {
           slug: "planificacion",
           titulo: "Planificación del Equipo",
           descripcion:
