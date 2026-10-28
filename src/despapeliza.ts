@@ -76,6 +76,24 @@ export const DESPAPELIZA: Catalogo = {
       ],
     },
     {
+      slug: "comercial-area",
+      titulo: "Comercial",
+      descripcion: "Pipeline y conversión de ventas",
+      grupo: true,
+      icono: "Users",
+      hijos: [
+        {
+          slug: "comercialvf",
+          titulo: "Indicadores Comerciales VF",
+          descripcion:
+            "Indicadores comerciales leídos desde HubSpot. Primer módulo: los leads BDR por mes y por tipo.",
+          url: "https://comercialvf.despapeliza.portalcenade.cl",
+          tipo: "tablero",
+          icono: "TrendingUp",
+        },
+      ],
+    },
+    {
       slug: "marketing-area",
       titulo: "Marketing",
       descripcion: "Canales, leads y costo por lead",
