@@ -36,6 +36,15 @@ export const ANAM: Catalogo = {
           tipo: "tablero",
           icono: "Presentation",
         },
+        {
+          slug: "experiencia",
+          titulo: "Experiencia ANAM",
+          descripcion:
+            "Los contratos ejecutados por cliente y tipo de servicio: anexo de experiencia para licitar, contratos vigentes por relicitar y su vínculo con las licitaciones ganadas.",
+          url: `${LIC}/experiencia`,
+          tipo: "tablero",
+          icono: "BadgeCheck",
+        },
       ],
     },
     {
