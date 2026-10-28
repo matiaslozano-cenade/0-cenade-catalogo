@@ -76,39 +76,12 @@ export const DESPAPELIZA: Catalogo = {
       ],
     },
     {
-      slug: "comercial-area",
-      titulo: "Comercial",
-      descripcion: "Pipeline y conversión de ventas",
-      grupo: true,
-      icono: "Users",
-      hijos: [
-        {
-          slug: "comercial",
-          titulo: "Indicadores Comerciales",
-          descripcion:
-            "Embudo por fase, productos, fuentes de lead y conversión desde Zoho CRM, con histórico desde 2019.",
-          url: "https://comercial.despapeliza.portalcenade.cl",
-          tipo: "tablero",
-          icono: "TrendingUp",
-        },
-      ],
-    },
-    {
       slug: "marketing-area",
       titulo: "Marketing",
       descripcion: "Canales, leads y costo por lead",
       grupo: true,
       icono: "Megaphone",
       hijos: [
-        {
-          slug: "marketing",
-          titulo: "Indicadores de Marketing",
-          descripcion:
-            "Qué canal trae los leads y a qué costo: costo por lead, conversión a tratos, cierres y retorno.",
-          url: "https://marketing.despapeliza.portalcenade.cl",
-          tipo: "tablero",
-          icono: "MousePointerClick",
-        },
         {
           slug: "leads",
           titulo: "Leads de Marketing",
@@ -149,19 +122,10 @@ export const DESPAPELIZA: Catalogo = {
       icono: "Layers",
       hijos: [
         {
-          slug: "semanal",
-          titulo: "Indicadores Semanales",
-          descripcion:
-            "El pulso semana a semana de desarrollo comercial y marketing, para corregir el rumbo a tiempo.",
-          url: "https://semanal.despapeliza.portalcenade.cl",
-          tipo: "tablero",
-          icono: "CalendarClock",
-        },
-        {
           slug: "hubspot",
           titulo: "Indicadores HubSpot",
           descripcion:
-            "Los indicadores comerciales, de marketing y semanales leídos desde HubSpot, en paralelo a los de Zoho mientras dura la migración.",
+            "Los indicadores comerciales, de marketing, de prospección y semanales, leídos desde HubSpot.",
           url: "https://hubspot.despapeliza.portalcenade.cl",
           tipo: "tablero",
           icono: "TrendingUp",
