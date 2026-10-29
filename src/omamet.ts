@@ -165,24 +165,10 @@ export const OMAMET: Catalogo = {
       slug: "administracion",
       titulo: "Administración",
       descripcion:
-        "Ingreso de Notas de Venta con autocompletado desde el maestro de productos: al elegir el código Omamet se llenan la descripción, la aleación, el material base y el peso teórico. Incluye todo el historial de ventas.",
+        "Portal de Administración: Ingeniería (fichas y planificación), Cotizaciones con el Presupuesto de Fabricación del Excel y Hoja de costos con el costo indirecto por hora de Fundición y Mecanizado.",
       tipo: "app",
       icono: "FileSpreadsheet",
       hijos: [
-        {
-          slug: "notas-venta",
-          titulo: "Ingreso de Notas de Venta",
-          url: `${ADM}/notas-venta`,
-          tipo: "app",
-          icono: "FileText",
-        },
-        {
-          slug: "productos",
-          titulo: "Maestro de Productos",
-          url: `${ADM}/productos`,
-          tipo: "registro",
-          icono: "Boxes",
-        },
         {
           slug: "cotizaciones",
           titulo: "Cotizaciones",
