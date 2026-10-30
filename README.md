@@ -78,11 +78,11 @@ resuelve quien pinta. Así el catálogo no arrastra dependencias de UI.
 | Omamet (4) | `OMAMET` | 23 | 22 |
 | Despapeliza (5) | `DESPAPELIZA` | 19 | 17 |
 | C.I.L. (6) | `CIL` | 11 | 11 |
-| Mardones (7) | `MARDONES` | 8 | 6 |
+| Mardones (7) | `MARDONES` | 14 | 9 |
 | Demo (8) | `DEMO` | 5 | 5 |
 | ANAM (9) | `ANAM` | 3 | 3 |
 | Ecoriles (10) | `ECORILES` | 4 | 4 |
-| **Total** | | **108** | **100** |
+| **Total** | | **114** | **103** |
 
 La diferencia entre ramas y pantallas son los nodos que agrupan, los que están por
 construirse (`estado: "pronto"`) y los `oculto: true`.
