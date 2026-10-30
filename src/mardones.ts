@@ -14,6 +14,15 @@ export const MARDONES: Catalogo = {
       icono: "Store",
       hijos: [
         {
+          slug: "web",
+          titulo: "Sitio Web",
+          descripcion:
+            "Nuevo desarrollo del sitio mardonesrc.cl: réplica exacta del sitio actual como punto de partida.",
+          url: "https://mrc.mardones.portalcenade.cl",
+          tipo: "app",
+          icono: "Globe",
+        },
+        {
           // El slug queda en "arriendos": es la llave de permisos de
           // usuarios.apps, no el nombre que se muestra.
           slug: "arriendos",
@@ -43,6 +52,15 @@ export const MARDONES: Catalogo = {
       tipo: "app",
       icono: "Building2",
       hijos: [
+        {
+          slug: "web",
+          titulo: "Sitio Web",
+          descripcion:
+            "Nuevo desarrollo del sitio espacio-inmobiliario.cl: réplica exacta del marketplace actual como punto de partida.",
+          url: "https://espi.mardones.portalcenade.cl",
+          tipo: "app",
+          icono: "Globe",
+        },
         {
           slug: "pe",
           titulo: "Plan Estratégico 2026",
