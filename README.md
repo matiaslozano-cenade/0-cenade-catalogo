@@ -94,6 +94,7 @@ construirse (`estado: "pronto"`) y los `oculto: true`.
 | `grupo` | Ordena la vista pero no entra en la rama de permiso (las áreas de Despapeliza) |
 | `oculto` | Existe como rama pero no se pinta (`pemrc`/`peespi`, que ya se ven dentro de su división) |
 | `principal` | Cómo se ofrece la pantalla propia de un nodo que además tiene hijos |
+| `directo` | La app tiene su propio menú (ERP): en el portal la tarjeta va directo a su `url` y no despliega los hijos, que siguen siendo las ramas de permiso y el menú de la app (Operaciones de Omamet, desde 2026-11-01) |
 | `sso` | Hay que entrar con `SSOLink`, no con un enlace normal (KPI Gerencias de Indra) |
 | `estado` | `levantamiento` o `pronto`: se muestra marcado y sin enlace |
 

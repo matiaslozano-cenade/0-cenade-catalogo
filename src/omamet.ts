@@ -59,7 +59,11 @@ export const OMAMET: Catalogo = {
       slug: "operaciones",
       titulo: "Operaciones",
       descripcion:
-        "Seguimiento productivo de pedidos: bloque comercial autocompletado desde Notas de Venta, prioridad, motivo de atraso y fechas de producción.",
+        "ERP de Operaciones: productos en proceso, agendamiento, planificación, solicitud de adquisiciones y calidad en un solo lugar, con menú lateral.",
+      // Pedido del usuario (2026-11-01): apretar Operaciones lleva al ERP, que
+      // tiene su propio menú con estas mismas opciones filtradas por permiso.
+      url: `${OP}/`,
+      directo: true,
       tipo: "app",
       icono: "AlertTriangle",
       hijos: [
@@ -70,6 +74,7 @@ export const OMAMET: Catalogo = {
           // La tabla de seguimiento es una pantalla de verdad: sin esto queda
           // inalcanzable, porque el título con hijos solo despliega.
           principal: "Seguimiento de pedidos",
+          descripcion: "Seguimiento productivo de cada línea de las Notas de Venta: prioridad, atraso y fechas de producción.",
           tipo: "app",
           icono: "AlertTriangle",
           hijos: [
@@ -77,6 +82,7 @@ export const OMAMET: Catalogo = {
               slug: "indicadores",
               titulo: "Indicadores de atrasos",
               url: `${OP}/atrasos/indicadores`,
+              descripcion: "Atrasos, saldos, prioridades, planos de ingeniería y hornos de Fundición.",
               tipo: "tablero",
               icono: "BarChart3",
             },
@@ -84,6 +90,7 @@ export const OMAMET: Catalogo = {
               slug: "materiales",
               titulo: "Materiales",
               url: `${OP}/atrasos/materiales`,
+              descripcion: "Materia pendiente por material y aleación.",
               tipo: "app",
               icono: "Package",
             },
@@ -93,6 +100,7 @@ export const OMAMET: Catalogo = {
           slug: "agendamiento",
           titulo: "Agendamiento",
           url: `${OP}/agendamiento`,
+          descripcion: "Agenda comercial y operacional de los despachos por Nota de Venta.",
           tipo: "app",
           icono: "CalendarClock",
         },
@@ -100,6 +108,7 @@ export const OMAMET: Catalogo = {
           slug: "adquisiciones",
           titulo: "Solicitud de Adquisiciones",
           url: `${OP}/adquisiciones`,
+          descripcion: "Solicitudes de compra de OMAMET y LAGMET con centro de costos.",
           tipo: "app",
           icono: "ShoppingCart",
         },
@@ -113,6 +122,7 @@ export const OMAMET: Catalogo = {
               slug: "lagmet",
               titulo: "LAGMET",
               url: `${OP}/planificacion/lagmet`,
+              descripcion: "Programa de mecanizado por máquina y carta Gantt.",
               tipo: "app",
               icono: "Factory",
             },
@@ -120,6 +130,7 @@ export const OMAMET: Catalogo = {
               slug: "fundicion",
               titulo: "Fundición",
               url: `${OP}/planificacion/fundicion`,
+              descripcion: "Coladas por horno, notas de venta y calendario.",
               tipo: "app",
               icono: "Flame",
             },
@@ -127,6 +138,7 @@ export const OMAMET: Catalogo = {
               slug: "mantenciones",
               titulo: "Mantenciones",
               url: `${OP}/planificacion/mantenciones`,
+              descripcion: "Plan preventivo, órdenes de trabajo y estado de máquinas.",
               tipo: "app",
               icono: "Wrench",
             },
@@ -158,6 +170,8 @@ export const OMAMET: Catalogo = {
       descripcion:
         "Control de calidad: registro de Productos No Conformes (rechazos) por defecto, área y acción, con costo de calidad e indicadores. Vinculado a las OT de Operaciones.",
       url: "https://calidad.omamet.portalcenade.cl/rechazos",
+      // Nombre de su pantalla en el menú del ERP de Operaciones.
+      principal: "Rechazos · PNC / NC",
       tipo: "app",
       icono: "ClipboardX",
     },

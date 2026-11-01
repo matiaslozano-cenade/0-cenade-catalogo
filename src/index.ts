@@ -46,6 +46,13 @@ export type Nodo = {
    * no aparecen acá.
    */
   principal?: string;
+  /**
+   * La app tiene navegación propia (un ERP con menú lateral): en el portal su
+   * tarjeta es un enlace directo a `url` aunque tenga hijos, en vez de
+   * desplegarlos. Los hijos siguen siendo las ramas de permiso y el menú que
+   * pinta la propia app.
+   */
+  directo?: boolean;
   /** La app tiene /auth/sso propio y hay que entrar con SSOLink, no con un enlace normal. */
   sso?: boolean;
   /**
