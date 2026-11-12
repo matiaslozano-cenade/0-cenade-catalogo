@@ -113,6 +113,24 @@ export const OMAMET: Catalogo = {
           icono: "ShoppingCart",
         },
         {
+          // Pedido del usuario (2026-11-12): las fichas viven en el ERP de
+          // Operaciones, no en Administración.
+          slug: "ingenieria",
+          titulo: "Ingeniería",
+          tipo: "app",
+          icono: "Ruler",
+          hijos: [
+            {
+              slug: "fichas",
+              titulo: "Fichas de Ingeniería",
+              url: `${OP}/ingenieria/fichas`,
+              descripcion: "Recorrido de cada línea de Nota de Venta: información → material → modelo → levantamiento → plano → OT mecánica.",
+              tipo: "app",
+              icono: "ClipboardList",
+            },
+          ],
+        },
+        {
           slug: "planificacion",
           titulo: "Planificación",
           tipo: "app",
@@ -179,7 +197,7 @@ export const OMAMET: Catalogo = {
       slug: "administracion",
       titulo: "Administración",
       descripcion:
-        "Portal de Administración: Ingeniería (fichas y planificación), Cotizaciones con el Presupuesto de Fabricación del Excel y Hoja de costos con el costo indirecto por hora de Fundición y Mecanizado.",
+        "Portal de Administración: Ingeniería (planificación), Cotizaciones con el Presupuesto de Fabricación del Excel y Hoja de costos con el costo indirecto por hora de Fundición y Mecanizado.",
       tipo: "app",
       icono: "FileSpreadsheet",
       hijos: [
@@ -203,13 +221,7 @@ export const OMAMET: Catalogo = {
           tipo: "app",
           icono: "Ruler",
           hijos: [
-            {
-              slug: "fichas",
-              titulo: "Fichas de Ingeniería",
-              url: `${ADM}/ingenieria/fichas`,
-              tipo: "app",
-              icono: "ClipboardList",
-            },
+            // Fichas de Ingeniería se mudó al ERP de Operaciones (2026-11-12).
             {
               slug: "planificacion",
               titulo: "Planificación",
