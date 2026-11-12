@@ -226,6 +226,20 @@ export const OMAMET: Catalogo = {
       tipo: "app",
       icono: "ClipboardX",
     },
+    {
+      // Levantamiento del 12-11-2026: cotización y NV en Softland y el programa
+      // que las va a insertar por la API de un tercero. Solo Cenade hasta que
+      // Matías decida mostrarlo; el proxy de la app también lo cierra.
+      slug: "softland",
+      titulo: "Cotización y NV en Softland",
+      descripcion:
+        "Levantamiento de cómo se hacen hoy la cotización y la nota de venta en Softland, maquetas del formato propuesto y estructura para la API.",
+      url: "https://softland.omamet.portalcenade.cl",
+      tipo: "app",
+      estado: "levantamiento",
+      icono: "FileText",
+      soloCenade: true,
+    },
     // Administración (cotizaciones, hoja de costos e ingeniería) se fundió en
     // el ERP de Operaciones el 2026-11-12, a pedido del usuario. El proyecto
     // 4-omamet-administracion solo redirige sus URLs viejas al ERP.

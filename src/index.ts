@@ -61,6 +61,13 @@ export type Nodo = {
    * tienen por qué aparecer dos veces.
    */
   oculto?: boolean;
+  /**
+   * Solo lo ve el rol cenade: trabajo interno sobre el cliente (levantamientos,
+   * análisis en curso) que todavía no se le muestra. El hub del cliente lo saca
+   * con `sinSoloCenade` antes de podar, y el proxy de la app tiene que cerrarlo
+   * también (`crearMiddleware({ cliente: "cenade" })`): esto solo esconde.
+   */
+  soloCenade?: boolean;
   hijos?: Nodo[];
 };
 
@@ -106,6 +113,14 @@ export function hojas(nodos: Nodo[]) {
       /** 'Operaciones › Planificación' — para ubicar el resultado en el árbol. */
       contexto: ancestros.map((a) => a.titulo).join(" › "),
     }));
+}
+
+/** Quita los nodos `soloCenade` (y lo que cuelga de ellos) para quien no es Cenade. */
+export function sinSoloCenade(nodos: Nodo[], rol?: string | null): Nodo[] {
+  if (rol === "cenade") return nodos;
+  return nodos
+    .filter((n) => !n.soloCenade)
+    .map((n) => (n.hijos ? { ...n, hijos: sinSoloCenade(n.hijos, rol) } : n));
 }
 
 /** Poda el árbol dejando solo lo que la cuenta puede ver.
