@@ -1,7 +1,6 @@
 import type { Catalogo } from "./index";
 
 const OP = "https://operaciones.omamet.portalcenade.cl";
-const ADM = "https://administracion.omamet.portalcenade.cl";
 const IND = "https://indicadores.omamet.portalcenade.cl";
 
 /**
@@ -59,7 +58,7 @@ export const OMAMET: Catalogo = {
       slug: "operaciones",
       titulo: "Operaciones",
       descripcion:
-        "ERP de Operaciones: productos en proceso, agendamiento, planificación, solicitud de adquisiciones y calidad en un solo lugar, con menú lateral.",
+        "ERP de Omamet: cotizaciones y costos, productos en proceso, agendamiento, ingeniería, planificación, adquisiciones y calidad en un solo lugar, con menú lateral.",
       // Pedido del usuario (2026-11-01): apretar Operaciones lleva al ERP, que
       // tiene su propio menú con estas mismas opciones filtradas por permiso.
       url: `${OP}/`,
@@ -67,6 +66,33 @@ export const OMAMET: Catalogo = {
       tipo: "app",
       icono: "AlertTriangle",
       hijos: [
+        {
+          // Pedido del usuario (2026-11-12): Cotizaciones y Hoja de costos se
+          // mudaron desde Administración. La ruta manda el permiso, por eso
+          // viven bajo /comercial.
+          slug: "comercial",
+          titulo: "Cotizaciones y costos",
+          tipo: "app",
+          icono: "Calculator",
+          hijos: [
+            {
+              slug: "cotizaciones",
+              titulo: "Cotizaciones",
+              url: `${OP}/comercial/cotizaciones`,
+              descripcion: "Presupuesto de Fabricación del Excel, con historial de cotizaciones.",
+              tipo: "app",
+              icono: "FileText",
+            },
+            {
+              slug: "costos",
+              titulo: "Hoja de costos",
+              url: `${OP}/comercial/costos`,
+              descripcion: "Qué cuentas van al costo y el costo indirecto por hora de Fundición y Mecanizado.",
+              tipo: "app",
+              icono: "Calculator",
+            },
+          ],
+        },
         {
           slug: "atrasos",
           titulo: "Productos en proceso",
@@ -105,16 +131,8 @@ export const OMAMET: Catalogo = {
           icono: "CalendarClock",
         },
         {
-          slug: "adquisiciones",
-          titulo: "Solicitud de Adquisiciones",
-          url: `${OP}/adquisiciones`,
-          descripcion: "Solicitudes de compra de OMAMET y LAGMET con centro de costos.",
-          tipo: "app",
-          icono: "ShoppingCart",
-        },
-        {
-          // Pedido del usuario (2026-11-12): las fichas viven en el ERP de
-          // Operaciones, no en Administración.
+          // Pedido del usuario (2026-11-12): Ingeniería (fichas y planificación)
+          // se mudó desde Administración.
           slug: "ingenieria",
           titulo: "Ingeniería",
           tipo: "app",
@@ -127,6 +145,14 @@ export const OMAMET: Catalogo = {
               descripcion: "Recorrido de cada línea de Nota de Venta: información → material → modelo → levantamiento → plano → OT mecánica.",
               tipo: "app",
               icono: "ClipboardList",
+            },
+            {
+              slug: "planificacion",
+              titulo: "Planificación de Ingeniería",
+              url: `${OP}/ingenieria/planificacion`,
+              descripcion: "Carta Gantt diaria por encargado, con proceso, avance e inicio/fin.",
+              tipo: "app",
+              icono: "GanttChartSquare",
             },
           ],
         },
@@ -170,6 +196,13 @@ export const OMAMET: Catalogo = {
               icono: "Factory",
             },
           ],
+        },        {
+          slug: "adquisiciones",
+          titulo: "Solicitud de Adquisiciones",
+          url: `${OP}/adquisiciones`,
+          descripcion: "Solicitudes de compra de OMAMET y LAGMET con centro de costos.",
+          tipo: "app",
+          icono: "ShoppingCart",
         },
       ],
     },
@@ -193,45 +226,8 @@ export const OMAMET: Catalogo = {
       tipo: "app",
       icono: "ClipboardX",
     },
-    {
-      slug: "administracion",
-      titulo: "Administración",
-      descripcion:
-        "Portal de Administración: Ingeniería (planificación), Cotizaciones con el Presupuesto de Fabricación del Excel y Hoja de costos con el costo indirecto por hora de Fundición y Mecanizado.",
-      tipo: "app",
-      icono: "FileSpreadsheet",
-      hijos: [
-        {
-          slug: "cotizaciones",
-          titulo: "Cotizaciones",
-          url: `${ADM}/cotizaciones`,
-          tipo: "app",
-          icono: "FileText",
-        },
-        {
-          slug: "costos",
-          titulo: "Hoja de costos",
-          url: `${ADM}/costos`,
-          tipo: "app",
-          icono: "Calculator",
-        },
-        {
-          slug: "ingenieria",
-          titulo: "Ingeniería",
-          tipo: "app",
-          icono: "Ruler",
-          hijos: [
-            // Fichas de Ingeniería se mudó al ERP de Operaciones (2026-11-12).
-            {
-              slug: "planificacion",
-              titulo: "Planificación",
-              url: `${ADM}/ingenieria/planificacion`,
-              tipo: "app",
-              icono: "GanttChartSquare",
-            },
-          ],
-        },
-      ],
-    },
+    // Administración (cotizaciones, hoja de costos e ingeniería) se fundió en
+    // el ERP de Operaciones el 2026-11-12, a pedido del usuario. El proyecto
+    // 4-omamet-administracion solo redirige sus URLs viejas al ERP.
   ],
 };
