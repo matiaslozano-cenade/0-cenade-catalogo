@@ -149,6 +149,15 @@ export const DESPAPELIZA: Catalogo = {
           icono: "CalendarDays",
         },
         {
+          slug: "asistente",
+          titulo: "Asistente de voz",
+          descripcion:
+            "Lalo registra las invitaciones a eventos hablándole o escribiéndole: arma la ficha, separa a cuáles van y prepara los recordatorios.",
+          url: "https://asistente.despapeliza.portalcenade.cl",
+          tipo: "app",
+          icono: "Mic",
+        },
+        {
           slug: "web",
           titulo: "Página de Despapeliza",
           descripcion:
