@@ -53,6 +53,15 @@ export const DESPAPELIZA: Catalogo = {
             { slug: "egresos", titulo: "Egresos", url: `${IND}/egresos`, tipo: "tablero", icono: "Receipt" },
             { slug: "flujo-caja", titulo: "Flujo de Caja", url: `${IND}/flujo-caja`, tipo: "tablero", icono: "Wallet" },
             { slug: "detalle", titulo: "Detalle de Facturas", url: `${IND}/detalle`, tipo: "tablero", icono: "FileText" },
+            {
+              slug: "chipax",
+              titulo: "Gestión de Chipax",
+              descripcion:
+                "Sube las cartolas en PDF, revisa los movimientos y súbelos a Chipax sin duplicar lo que ya está.",
+              url: `${IND}/chipax`,
+              tipo: "carga",
+              icono: "Upload",
+            },
           ],
         },
         {
