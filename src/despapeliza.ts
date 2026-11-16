@@ -161,7 +161,7 @@ export const DESPAPELIZA: Catalogo = {
           slug: "asistente",
           titulo: "Asistente de voz",
           descripcion:
-            "Lalo registra las invitaciones a eventos hablándole o escribiéndole: arma la ficha, separa a cuáles van y prepara los recordatorios.",
+            "Mimi registra las invitaciones a eventos hablándole o escribiéndole: arma la ficha, separa a cuáles van y prepara los recordatorios.",
           url: "https://asistente.despapeliza.portalcenade.cl",
           tipo: "app",
           icono: "Mic",
