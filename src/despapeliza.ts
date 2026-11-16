@@ -62,6 +62,15 @@ export const DESPAPELIZA: Catalogo = {
               tipo: "carga",
               icono: "Upload",
             },
+            {
+              slug: "clasificacion",
+              titulo: "Clasificación",
+              descripcion:
+                "Lo que falta por clasificar en Chipax, mes a mes, para elegir la cuenta contable de cada documento.",
+              url: `${IND}/clasificacion`,
+              tipo: "registro",
+              icono: "Tags",
+            },
           ],
         },
         {
