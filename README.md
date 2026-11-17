@@ -72,7 +72,7 @@ resuelve quien pinta. Así el catálogo no arrastra dependencias de UI.
 | Cliente | Export | Ramas | Pantallas |
 | --- | --- | --- | --- |
 | Cenade (0) | `CENADE` | 4 | 4 |
-| Indra Repuestos (1) | `INDRA` | 15 | 15 |
+| Indra Repuestos (1) | `INDRA` | 16 | 16 |
 | Hidrogistica (2) | `HIDROGISTICA` | 5 | 5 |
 | Chamonate (3) | `CHAMONATE` | 12 | 9 |
 | Omamet (4) | `OMAMET` | 23 | 22 |
