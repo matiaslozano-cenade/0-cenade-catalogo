@@ -64,13 +64,31 @@ export const INDRA: Catalogo = {
       icono: "Gavel",
     },
     {
-      slug: "reposicion",
-      titulo: "Modelo de Reposición",
-      descripcion:
-        "Carga los extractos de SAP y obtén la compra sugerida por proveedor, alertas de sobrestock y redistribución entre locales. Tablero, filtros y Excel descargable. Se procesa en tu navegador.",
-      url: "https://reposicion.indra.portalcenade.cl",
-      tipo: "app",
-      icono: "PackageSearch",
+      slug: "abastecimiento-area",
+      titulo: "Abastecimiento",
+      descripcion: "Compra sugerida y catálogos de repuestos por marca.",
+      grupo: true,
+      icono: "Package",
+      hijos: [
+        {
+          slug: "reposicion",
+          titulo: "Modelo de Reposición",
+          descripcion:
+            "Carga los extractos de SAP y obtén la compra sugerida por proveedor, alertas de sobrestock y redistribución entre locales. Tablero, filtros y Excel descargable. Se procesa en tu navegador.",
+          url: "https://reposicion.indra.portalcenade.cl",
+          tipo: "app",
+          icono: "PackageSearch",
+        },
+        {
+          slug: "catalogos",
+          titulo: "Catálogos de Repuestos",
+          descripcion:
+            "Catálogos H&Q por marca (SEAT, CHERY): foto de cada pieza, código H&Q, OE origen y equivalencias de otras marcas. Busca por cualquier código o modelo.",
+          url: "https://catalogos.indra.portalcenade.cl",
+          tipo: "app",
+          icono: "BookOpen",
+        },
+      ],
     },
     {
       slug: "digitalizacion-logistica",
@@ -80,15 +98,6 @@ export const INDRA: Catalogo = {
       url: "https://digitalizacion.indra.portalcenade.cl",
       tipo: "app",
       icono: "Boxes",
-    },
-    {
-      slug: "catalogos",
-      titulo: "Catálogos de Repuestos",
-      descripcion:
-        "Catálogos H&Q por marca (SEAT, CHERY): foto de cada pieza, código H&Q, OE origen y equivalencias de otras marcas. Busca por cualquier código o modelo.",
-      url: "https://catalogos.indra.portalcenade.cl",
-      tipo: "app",
-      icono: "BookOpen",
     },
     {
       slug: "organigrama",
