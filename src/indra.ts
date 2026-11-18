@@ -88,6 +88,15 @@ export const INDRA: Catalogo = {
           tipo: "app",
           icono: "BookOpen",
         },
+        {
+          slug: "catalogo-chery",
+          titulo: "Catálogo Chery",
+          descripcion:
+            "Catálogo H&Q solo de Chery: foto de cada pieza, código H&Q, OE origen y equivalencias. Público con el enlace, en 4 idiomas.",
+          url: "https://catalogo-chery.indra.portalcenade.cl",
+          tipo: "app",
+          icono: "BookOpen",
+        },
       ],
     },
     {
