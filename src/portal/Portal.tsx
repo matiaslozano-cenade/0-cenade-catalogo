@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowUpRight, ChevronDown } from "lucide-react";
 import { hojas as hojasDe, type Nodo } from "../index";
 import { Buscador } from "./Buscador";
 import { icono } from "./iconos";
+import { Saludo } from "./Saludo";
 
 /**
  * El portal de inicio de un cliente, completo. Antes cada portal traía su
@@ -126,11 +127,14 @@ function Celdas({
   nodo,
   titulo,
   cuenta,
+  numero,
 }: {
   nodo: Nodo;
   titulo?: string;
   /** Si viene, la fila despliega en vez de navegar: muestra cuántas pantallas trae. */
   cuenta?: number;
+  /** Número de orden del primer nivel: 01, 02… */
+  numero?: number;
 }) {
   const Icon = icono(nodo.icono);
   const pendiente = nodo.estado === "pronto" || !nodo.url;
@@ -138,6 +142,11 @@ function Celdas({
   return (
     <>
       <span className="pc-c-nombre">
+        {numero !== undefined && (
+          <span className="pc-num" aria-hidden>
+            {String(numero).padStart(2, "0")}
+          </span>
+        )}
         <span className="pc-ico-caja">
           <Icon className="pc-ico" />
         </span>
@@ -175,29 +184,36 @@ const TONOS = [
   "#f43f5e", "#06b6d4", "#f97316", "#14b8a6",
 ];
 
-const estilo = (nivel: number, tono?: string) =>
-  ({ "--pc-nivel": nivel, ...(tono ? { "--pc-tono": tono } : {}) }) as CSSProperties;
+const estilo = (nivel: number, tono?: string, orden?: number) =>
+  ({
+    "--pc-nivel": nivel,
+    ...(tono ? { "--pc-tono": tono } : {}),
+    // El orden escalona la entrada de las filas al cargar.
+    ...(orden !== undefined ? { "--pc-i": orden } : {}),
+  }) as CSSProperties;
 
 /** Una pantalla: una fila de la tabla. */
 function Fila({
   nodo,
   nivel,
   tono,
+  numero,
   EnlaceSso,
 }: {
   nodo: Nodo;
   nivel: number;
   tono?: string;
+  numero?: number;
   EnlaceSso?: PortalProps["EnlaceSso"];
 }) {
   return (
     <Enlace
       nodo={nodo}
       className={nivel === 0 ? "pc-fila pc-fila-1" : "pc-fila"}
-      style={estilo(nivel, tono)}
+      style={estilo(nivel, tono, numero)}
       EnlaceSso={EnlaceSso}
     >
-      <Celdas nodo={nodo} />
+      <Celdas nodo={nodo} numero={numero} />
     </Enlace>
   );
 }
@@ -239,20 +255,30 @@ function Area({
   nodo,
   nivel,
   tono,
+  numero,
   EnlaceSso,
 }: {
   nodo: Nodo;
   nivel: number;
   tono?: string;
+  numero?: number;
   EnlaceSso?: PortalProps["EnlaceSso"];
 }) {
   return (
-    <details className="pc-area" style={tono ? ({ "--pc-tono": tono } as CSSProperties) : undefined}>
+    <details
+      className="pc-area"
+      style={
+        {
+          ...(tono ? { "--pc-tono": tono } : {}),
+          ...(numero !== undefined ? { "--pc-i": numero } : {}),
+        } as CSSProperties
+      }
+    >
       <summary
         className={nivel === 0 ? "pc-fila pc-fila-1 pc-fila-area" : "pc-fila pc-fila-area"}
         style={estilo(nivel)}
       >
-        <Celdas nodo={nodo} cuenta={contarPantallas(nodo)} />
+        <Celdas nodo={nodo} cuenta={contarPantallas(nodo)} numero={numero} />
       </summary>
       <div className="pc-area-in">
         <Hijos nodo={nodo} nivel={nivel + 1} EnlaceSso={EnlaceSso} />
@@ -334,6 +360,7 @@ export function Portal({
       <main className="pc-cuerpo">
         <div className="pc-encabezado">
           <div className="pc-hero">
+            <Saludo nombre={usuario} respaldo={etiqueta} />
             <h1>
               Herramientas <span>{nombre}</span>
             </h1>
@@ -363,9 +390,9 @@ export function Portal({
             {arbol.map((n, i) => {
               const tono = TONOS[i % TONOS.length];
               return esHoja(n) ? (
-                <Fila key={n.slug} nodo={n} nivel={0} tono={tono} EnlaceSso={EnlaceSso} />
+                <Fila key={n.slug} nodo={n} nivel={0} tono={tono} numero={i + 1} EnlaceSso={EnlaceSso} />
               ) : (
-                <Area key={n.slug} nodo={n} nivel={0} tono={tono} EnlaceSso={EnlaceSso} />
+                <Area key={n.slug} nodo={n} nivel={0} tono={tono} numero={i + 1} EnlaceSso={EnlaceSso} />
               );
             })}
           </div>

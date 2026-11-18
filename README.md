@@ -129,6 +129,11 @@ import { Portal } from "@cenade/catalogo/portal";
 - **Disposición:** barra angosta (logo y sesión) y una sola tabla con columnas fijas
   —Pantalla · Descripción · Tipo— y una banda por área. Estilo en `src/portal/portal.css`
   (CSS plano con prefijo `pc-`, no depende de Tailwind).
+- **Detalles de diseño (18-11-2026, «que no se vea tan IA»):** saludo con fecha en hora de Chile sobre el
+  título (`Saludo.tsx`, se calcula en el navegador porque hay portales estáticos); nombre del cliente en
+  serif cursiva; filas del primer nivel numeradas 01, 02…; entrada escalonada de las filas, áreas que
+  abren deslizando, ícono que se inclina al pasar el mouse; trama de puntos de fondo y filete del
+  acento bajo la barra. Todo respeta `prefers-reduced-motion`.
 - **Navegación:** las apps abren en la **misma pestaña**; solo `tipo: "sitio"` abre aparte.
   Abrir en pestaña nueva dejaba un portal duplicado cada vez que se usaba «Volver al portal».
 - **Íconos:** el mapa nombre → ícono vive solo en `src/portal/iconos.ts`. Un ícono nuevo se agrega ahí.
