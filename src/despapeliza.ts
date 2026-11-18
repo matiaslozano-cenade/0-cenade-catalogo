@@ -49,10 +49,10 @@ export const DESPAPELIZA: Catalogo = {
           tipo: "tablero",
           icono: "BarChart3",
           hijos: [
-            { slug: "ventas", titulo: "Ingresos", url: `${IND}/ventas`, tipo: "tablero", icono: "TrendingUp" },
-            { slug: "egresos", titulo: "Egresos", url: `${IND}/egresos`, tipo: "tablero", icono: "Receipt" },
-            { slug: "flujo-caja", titulo: "Flujo de Caja", url: `${IND}/flujo-caja`, tipo: "tablero", icono: "Wallet" },
-            { slug: "detalle", titulo: "Detalle de Facturas", url: `${IND}/detalle`, tipo: "tablero", icono: "FileText" },
+            { slug: "ventas", titulo: "Ingresos", descripcion: "Facturado del año contra la meta y el año anterior, ingresos netos del mes y por cobrar.", url: `${IND}/ventas`, tipo: "tablero", icono: "TrendingUp" },
+            { slug: "egresos", titulo: "Egresos", descripcion: "Egresos mensuales por tipo, distribución del mes, por pagar por antigüedad y principales proveedores.", url: `${IND}/egresos`, tipo: "tablero", icono: "Receipt" },
+            { slug: "flujo-caja", titulo: "Flujo de Caja", descripcion: "Abonos y cargos mensuales con flujo neto, saldos por cuenta y % conciliado.", url: `${IND}/flujo-caja`, tipo: "tablero", icono: "Wallet" },
+            { slug: "detalle", titulo: "Detalle de Facturas", descripcion: "Listados de facturas de venta, proyección de cobros, facturas por pagar y costos por categoría.", url: `${IND}/detalle`, tipo: "tablero", icono: "FileText" },
             {
               slug: "chipax",
               titulo: "Gestión de Chipax",
@@ -138,14 +138,14 @@ export const DESPAPELIZA: Catalogo = {
       hijos: [
         {
           slug: "ti",
-          titulo: "Desarrollos",
+          titulo: "Tableros de Tecnología",
           descripcion:
             "Actividad del producto Legale leída de GitHub: tickets, tiempos de resolución, entregas y equipo.",
           tipo: "tablero",
           icono: "Code2",
           hijos: [
-            { slug: "desarrollos", titulo: "Desarrollos", url: `${TEC}/desarrollos`, tipo: "tablero", icono: "Code2" },
-            { slug: "soporte", titulo: "Soporte", tipo: "tablero", estado: "pronto", icono: "LifeBuoy" },
+            { slug: "desarrollos", titulo: "Desarrollos", descripcion: "Actividad de la fábrica de software del producto Legale, en 5 pestañas.", url: `${TEC}/desarrollos`, tipo: "tablero", icono: "Code2" },
+            { slug: "soporte", titulo: "Soporte", descripcion: "Por construir: falta definir la fuente de datos.", tipo: "tablero", estado: "pronto", icono: "LifeBuoy" },
           ],
         },
       ],

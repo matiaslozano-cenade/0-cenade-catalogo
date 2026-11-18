@@ -32,21 +32,21 @@ export const OMAMET: Catalogo = {
       hijos: [
         {
           slug: "operaciones",
-          titulo: "Operaciones",
+          titulo: "Operaciones", descripcion: "Tiempos productivos, % de rechazo, mantención preventiva y fechas compromiso.",
           url: `${IND}/indicadores/operaciones`,
           tipo: "tablero",
           icono: "Settings2",
         },
         {
           slug: "finanzas",
-          titulo: "Finanzas",
+          titulo: "Finanzas", descripcion: "Plazo de cobranzas por tramo, monto cobrado mensual y % de evaluación de OC.",
           url: `${IND}/indicadores/finanzas`,
           tipo: "tablero",
           icono: "DollarSign",
         },
         {
           slug: "comercial",
-          titulo: "Comercial",
+          titulo: "Comercial", descripcion: "Prospectos, oportunidades, ganados y perdidos, clientes nuevos y ventas vs. meta. Datos de ejemplo hasta cerrar el levantamiento.",
           url: `${IND}/indicadores/comercial`,
           tipo: "tablero",
           estado: "levantamiento",
@@ -64,14 +64,14 @@ export const OMAMET: Catalogo = {
       url: `${OP}/`,
       directo: true,
       tipo: "app",
-      icono: "AlertTriangle",
+      icono: "Factory",
       hijos: [
         {
           // Pedido del usuario (2026-11-12): Cotizaciones y Hoja de costos se
           // mudaron desde Administración. La ruta manda el permiso, por eso
           // viven bajo /comercial.
           slug: "comercial",
-          titulo: "Cotizaciones y costos",
+          titulo: "Cotizaciones y costos", descripcion: "Cotizaciones y hoja de costos.",
           tipo: "app",
           icono: "Calculator",
           hijos: [
@@ -102,7 +102,7 @@ export const OMAMET: Catalogo = {
           principal: "Seguimiento de pedidos",
           descripcion: "Seguimiento productivo de cada línea de las Notas de Venta: prioridad, atraso y fechas de producción.",
           tipo: "app",
-          icono: "AlertTriangle",
+          icono: "ClipboardList",
           hijos: [
             {
               slug: "indicadores",
@@ -134,7 +134,7 @@ export const OMAMET: Catalogo = {
           // Pedido del usuario (2026-11-12): Ingeniería (fichas y planificación)
           // se mudó desde Administración.
           slug: "ingenieria",
-          titulo: "Ingeniería",
+          titulo: "Ingeniería", descripcion: "Fichas de Ingeniería y planificación de Ingeniería.",
           tipo: "app",
           icono: "Ruler",
           hijos: [
@@ -158,7 +158,7 @@ export const OMAMET: Catalogo = {
         },
         {
           slug: "planificacion",
-          titulo: "Planificación",
+          titulo: "Planificación", descripcion: "Programas de LAGMET, Fundición y Mantenciones.",
           tipo: "app",
           icono: "GanttChartSquare",
           hijos: [
@@ -190,7 +190,7 @@ export const OMAMET: Catalogo = {
             // está pendiente de definir qué se programa y con qué datos.
             {
               slug: "omamet",
-              titulo: "Omamet",
+              titulo: "Omamet", descripcion: "Por construir.",
               tipo: "app",
               estado: "pronto",
               icono: "Factory",

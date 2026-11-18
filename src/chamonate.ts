@@ -15,11 +15,11 @@ export const CHAMONATE: Catalogo = {
       tipo: "tablero",
       icono: "Sprout",
       hijos: [
-        { slug: "general", titulo: "General", url: "https://kpi-general.chamonate.portalcenade.cl", tipo: "tablero", icono: "BarChart3" },
-        { slug: "campo", titulo: "Campo", url: "https://kpi-campo.chamonate.portalcenade.cl", tipo: "tablero", icono: "Sprout" },
-        { slug: "administracion", titulo: "Administración", url: "https://kpi-administracion.chamonate.portalcenade.cl", tipo: "tablero", icono: "Building2" },
-        { slug: "maquinaria", titulo: "Maquinaria", url: "https://kpi-maquinaria.chamonate.portalcenade.cl", tipo: "tablero", icono: "Wrench" },
-        { slug: "packing", titulo: "Packing", url: "https://kpi-packing.chamonate.portalcenade.cl", tipo: "tablero", icono: "Package" },
+        { slug: "general", titulo: "General", descripcion: "Consolidado de las tres líneas: ingresos, costos, resultado y margen por año y mes, con filtro por línea de negocio.", url: "https://kpi-general.chamonate.portalcenade.cl", tipo: "tablero", icono: "BarChart3" },
+        { slug: "campo", titulo: "Campo", descripcion: "Rentabilidad agrícola por temporada: ingresos vs costos, EERR por cuenta, drill sucursal → cultivo → cuartel.", url: "https://kpi-campo.chamonate.portalcenade.cl", tipo: "tablero", icono: "Sprout" },
+        { slug: "administracion", titulo: "Administración", descripcion: "Cuarta línea de negocio, con su propio Estado de Resultado (EERR) por cuenta.", url: "https://kpi-administracion.chamonate.portalcenade.cl", tipo: "tablero", icono: "Building2" },
+        { slug: "maquinaria", titulo: "Maquinaria", descripcion: "Rentabilidad de la flota: ingresos reales por OT vs costos, EERR por labor y máquina.", url: "https://kpi-maquinaria.chamonate.portalcenade.cl", tipo: "tablero", icono: "Wrench" },
+        { slug: "packing", titulo: "Packing", descripcion: "Rentabilidad de packing por línea: ingresos vs costos, EERR por cuenta, drill línea → centro de costo.", url: "https://kpi-packing.chamonate.portalcenade.cl", tipo: "tablero", icono: "Package" },
       ],
     },
     {
@@ -30,10 +30,10 @@ export const CHAMONATE: Catalogo = {
       tipo: "tablero",
       icono: "Calculator",
       hijos: [
-        { slug: "maquinaria", titulo: "Maquinaria", url: `${PPTO}/maquinaria`, tipo: "tablero", icono: "Wrench" },
-        { slug: "campo", titulo: "Campo", tipo: "tablero", estado: "pronto", icono: "Sprout" },
-        { slug: "packing", titulo: "Packing", tipo: "tablero", estado: "pronto", icono: "Package" },
-        { slug: "consolidado", titulo: "Consolidado", tipo: "tablero", estado: "pronto", icono: "BarChart3" },
+        { slug: "maquinaria", titulo: "Maquinaria", descripcion: "Presupuesto de Maquinaria contra el resultado real.", url: `${PPTO}/maquinaria`, tipo: "tablero", icono: "Wrench" },
+        { slug: "campo", titulo: "Campo", descripcion: "Presupuesto de Campo contra el resultado real. Por construir.", tipo: "tablero", estado: "pronto", icono: "Sprout" },
+        { slug: "packing", titulo: "Packing", descripcion: "Presupuesto de Packing contra el resultado real. Por construir.", tipo: "tablero", estado: "pronto", icono: "Package" },
+        { slug: "consolidado", titulo: "Consolidado", descripcion: "Presupuesto consolidado de las líneas de negocio contra el resultado real. Por construir.", tipo: "tablero", estado: "pronto", icono: "BarChart3" },
       ],
     },
     {

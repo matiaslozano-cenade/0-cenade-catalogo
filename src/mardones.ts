@@ -37,7 +37,7 @@ export const MARDONES: Catalogo = {
         // peespi), así que va como nodo suelto además de colgar acá.
         {
           slug: "pe",
-          titulo: "Plan Estratégico 2026",
+          titulo: "Plan Estratégico 2026", descripcion: "Seguimiento de los 4 pilares y 34 acciones del PE 2026 de Renta Comercial.",
           url: "https://pemrc.mardones.portalcenade.cl",
           tipo: "tablero",
           icono: "Target",
@@ -63,7 +63,7 @@ export const MARDONES: Catalogo = {
         },
         {
           slug: "pe",
-          titulo: "Plan Estratégico 2026",
+          titulo: "Plan Estratégico 2026", descripcion: "Seguimiento del PE 2026 de Espacio Inmobiliario: 4 pilares, 31 acciones con avance, responsables y notas.",
           url: "https://peespi.mardones.portalcenade.cl",
           tipo: "tablero",
           icono: "Target",

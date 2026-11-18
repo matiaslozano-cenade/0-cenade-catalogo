@@ -7,7 +7,7 @@ export const CENADE: Catalogo = {
   nodos: [
     {
       slug: "planificacion",
-      titulo: "Planificación de clientes",
+      titulo: "Planificación de clientes", descripcion: "Tablero por cliente: cada cliente en una columna y sus tareas hacia abajo, con casilla para marcar lo realizado.",
       url: "https://planificacion.portalcenade.cl",
       tipo: "app",
       icono: "CalendarDays",
@@ -23,7 +23,7 @@ export const CENADE: Catalogo = {
     },
     {
       slug: "leads",
-      titulo: "Leads y Diagnósticos",
+      titulo: "Leads y Diagnósticos", descripcion: "Formularios de contacto y autodiagnósticos recibidos desde cenade.cl.",
       url: "https://leads.cenade.portalcenade.cl",
       tipo: "app",
       icono: "ClipboardList",
@@ -48,14 +48,14 @@ export const CENADE: Catalogo = {
     },
     {
       slug: "web",
-      titulo: "Sitio web público",
+      titulo: "Sitio web público", descripcion: "Sitio público de Cenade en cenade.cl.",
       url: "https://cenade.cl",
       tipo: "sitio",
       icono: "Globe",
     },
     {
       slug: "sdi",
-      titulo: "Sitio web SDI",
+      titulo: "Sitio web SDI", descripcion: "Landing de una página para SDI — Sistemas de Impresión (demo de sitio web público).",
       url: "https://sdi.cenade.portalcenade.cl",
       tipo: "sitio",
       icono: "Printer",

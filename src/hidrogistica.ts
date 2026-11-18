@@ -18,9 +18,9 @@ export const HIDROGISTICA: Catalogo = {
       icono: "Target",
       hijos: [
         // Los slugs salen de 2_hidrogistica_pe2026_areas: son los que sirve el panel.
-        { slug: "servicio-mercado-del-agua", titulo: "Servicio Mercado del Agua", url: `${PE}/servicio-mercado-del-agua`, tipo: "tablero", icono: "Droplets" },
-        { slug: "cadena-de-suministro", titulo: "Cadena de Suministro", url: `${PE}/cadena-de-suministro`, tipo: "tablero", icono: "Boxes" },
-        { slug: "operacion-logistica", titulo: "Operación Logística", url: `${PE}/operacion-logistica`, tipo: "tablero", icono: "Truck" },
+        { slug: "servicio-mercado-del-agua", titulo: "Servicio Mercado del Agua", descripcion: "Objetivos y acciones del área Servicio Mercado del Agua en el Plan Estratégico.", url: `${PE}/servicio-mercado-del-agua`, tipo: "tablero", icono: "Droplets" },
+        { slug: "cadena-de-suministro", titulo: "Cadena de Suministro", descripcion: "Objetivos y acciones del área Cadena de Suministro en el Plan Estratégico.", url: `${PE}/cadena-de-suministro`, tipo: "tablero", icono: "Boxes" },
+        { slug: "operacion-logistica", titulo: "Operación Logística", descripcion: "Objetivos y acciones del área Operación Logística en el Plan Estratégico.", url: `${PE}/operacion-logistica`, tipo: "tablero", icono: "Truck" },
       ],
     },
     {
