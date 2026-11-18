@@ -83,7 +83,7 @@ export const INDRA: Catalogo = {
           slug: "catalogos",
           titulo: "Catálogos de Repuestos",
           descripcion:
-            "Catálogos H&Q por marca (SEAT, CHERY): foto de cada pieza, código H&Q, OE origen y equivalencias de otras marcas. Busca por cualquier código o modelo.",
+            "Todas las marcas en un solo catálogo H&Q (Volkswagen, Chery, Fiat, Audi, SEAT y Skoda): foto, código H&Q, OE origen y equivalencias, con filtros por marca y familia. Público con el enlace, en 4 idiomas.",
           url: "https://catalogos.indra.portalcenade.cl",
           tipo: "app",
           icono: "BookOpen",
