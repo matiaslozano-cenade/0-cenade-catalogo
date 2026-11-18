@@ -102,3 +102,35 @@ construirse (`estado: "pronto"`) y los `oculto: true`.
 
 `@cenade/portal-auth` se instala por `git+https`. Si el repo es privado, `npm install`
 falla en Vercel sin decir por qué. Este repo se mantiene público por la misma razón.
+
+## Portal de inicio: un solo dibujo para todos los clientes (`@cenade/catalogo/portal`)
+
+Desde la versión 1.3.0 el paquete también trae **cómo se ve** el portal de inicio, no solo el árbol.
+Antes cada `{n}-{cliente}-inicio` tenía su copia de `Rama.tsx`, `Buscador.tsx`, `iconos.ts` y el CSS,
+y las copias se desviaban solas (íconos faltantes, botones de sesión distintos, `directo` solo en Omamet).
+
+```tsx
+// app/layout.tsx
+import "@cenade/catalogo/portal.css";
+
+// app/page.tsx
+import { Portal } from "@cenade/catalogo/portal";
+
+<Portal
+  nombre="Omamet"
+  acento="#10b981"                       // lo único que cambia entre clientes
+  logo={<Image src="/omamet-logo.jpeg" … />}
+  nodos={nodos}                          // ya podados con puedeVer
+  usuario={perfil?.nombre}
+  acciones={<BotonSalir className="pc-btn">Salir</BotonSalir>}
+/>
+```
+
+- **Disposición:** barra angosta (logo y sesión) y una sola tabla con columnas fijas
+  —Pantalla · Descripción · Tipo— y una banda por área. Estilo en `src/portal/portal.css`
+  (CSS plano con prefijo `pc-`, no depende de Tailwind).
+- **Navegación:** las apps abren en la **misma pestaña**; solo `tipo: "sitio"` abre aparte.
+  Abrir en pestaña nueva dejaba un portal duplicado cada vez que se usaba «Volver al portal».
+- **Íconos:** el mapa nombre → ícono vive solo en `src/portal/iconos.ts`. Un ícono nuevo se agrega ahí.
+- **Para cambiar el diseño de todos los portales:** editar `portal.css` / `Portal.tsx`, pushear,
+  y en cada portal `npm update @cenade/catalogo` (el lockfile clava el commit).
