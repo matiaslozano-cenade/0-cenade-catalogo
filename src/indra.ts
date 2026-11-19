@@ -83,7 +83,7 @@ export const INDRA: Catalogo = {
           slug: "catalogos",
           titulo: "Catálogos de Repuestos",
           descripcion:
-            "Catálogos por proveedor en un solo buscador: H&Q China, Ekimpar Turquía, Universal Brasil, Meat & Doria Italia y Teknorot Turquía, solo marcas que trabaja Indra. Foto, código, OE origen y equivalencias; filtros por proveedor, marca y familia. Público con el enlace, en 4 idiomas.",
+            "Catálogos por proveedor en un solo buscador: H&Q China, Ekimpar Turquía, Universal Brasil, Meat & Doria Italia, Teknorot Turquía y Cauplas, solo marcas que trabaja Indra. Foto, código, OE origen y equivalencias; filtros por proveedor, marca y familia. Público con el enlace, en 4 idiomas.",
           url: "https://catalogos.indra.portalcenade.cl",
           tipo: "app",
           icono: "BookOpen",
