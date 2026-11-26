@@ -55,6 +55,37 @@ export const OMAMET: Catalogo = {
       ],
     },
     {
+      // Pedido del usuario (2026-11-26): ERP Comercial aparte, con el mismo
+      // armazón que el de Operaciones. Réplica del «Gestión CRM» de Omamet: en
+      // el CRM la cotización es una «Oportunidad de negocio».
+      slug: "comercial",
+      titulo: "Comercial",
+      descripcion:
+        "ERP Comercial: oportunidades (cotizaciones para el cliente e internas) y notas de venta, directas o desde una cotización, como en el Gestión CRM.",
+      url: "https://comercial.omamet.portalcenade.cl/",
+      directo: true,
+      tipo: "app",
+      icono: "HeartHandshake",
+      hijos: [
+        {
+          slug: "oportunidades",
+          titulo: "Oportunidades",
+          url: "https://comercial.omamet.portalcenade.cl/oportunidades",
+          descripcion: "Cotizaciones a clientes: ficha, documento para el cliente e interno, y paso a nota de venta.",
+          tipo: "app",
+          icono: "HeartHandshake",
+        },
+        {
+          slug: "notas-venta",
+          titulo: "Notas de Venta",
+          url: "https://comercial.omamet.portalcenade.cl/notas-venta",
+          descripcion: "Notas de venta directas o desde una cotización, con su orden de compra.",
+          tipo: "app",
+          icono: "ShoppingCart",
+        },
+      ],
+    },
+    {
       slug: "operaciones",
       titulo: "Operaciones",
       descripcion:
